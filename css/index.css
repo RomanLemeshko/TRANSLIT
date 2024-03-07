@@ -1,0 +1,368 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Стилизация заголовка */
+
+.header {
+    color: var(--Main-purple, #4520AB);
+    text-align: center;
+    font-family: IBM Plex Mono;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -3.2px;
+}
+
+.header p {
+    margin: 44px 0 0 0;
+}
+
+/* Стилизация поля ввода */
+
+.input-btn {
+    box-sizing: border-box;
+    margin-top: 86px;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 500px;
+    height: 56px;
+
+    border: 2px solid black;
+    border-radius: 14px;
+}
+
+.input {  
+    width: 500px;
+    border: none;
+    outline: none;
+    border-radius: 14px;
+
+    color: var(--BG-black, #111);
+    font-family: IBM Plex Mono;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.9px;
+
+    opacity: 0.4;
+}
+
+.btn {
+    padding: 12px;
+    
+    display: inline-flex;
+    width: 107px;
+    height: 38.08px;
+    padding: 0px 12px 5px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    background: var(--BG-black, #111);
+    border: none;
+
+    color: var(--Textmain-inverse, #FFF);
+    font-family: IBM Plex Mono;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.54px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    scale: 1.01;
+}
+
+.btn:active {
+    cursor: pointer;
+    scale: 0.99;
+}
+
+/* Стилизация словаря */
+
+.dictionary {
+    margin-top: 60px;
+    
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    background-color: #f0f0f0;
+
+    position: relative;
+}
+
+.word,
+.wordNew {
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+
+    color: var(--BG-black, #111);
+    font-family: IBM Plex Mono;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; 
+    letter-spacing: -0.54px;
+}
+
+.word:first {
+    border-top-right-radius: 8px;
+}
+
+/* Стилизация левого блока словаря - всплывающая подсказка */
+
+.leftBlock-Rus > [data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    width: 101px;
+    height: auto;
+    position: absolute;
+    text-align: center;
+    padding: 8px 16px 10px 16px;
+    display: flex;
+    align-items: center;
+    white-space: pre-wrap;
+    justify-content: center;
+
+    border-radius: 10px;
+    background: #FFF;
+    color: #000;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.10);
+
+    font-family: 'IBM Plex Mono';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.48px;
+    gap: 10px;
+
+    left: 25px;
+    bottom: 25px;
+
+    max-width: 101px;
+    word-break: break-word;
+}
+
+/* Стилизация левого блока словаря */
+
+.leftBlock-Rus {
+    border-right: 2px solid #111;
+    width: 250px;
+
+    display: flex;
+    align-items: center;
+}
+
+.number,
+.numberNew {
+    padding-left: 12px;
+    
+    color: var(--BG-black, #111);
+    font-family: IBM Plex Mono;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.7px;
+}
+
+.rusWord,
+.rusWordOld {
+    padding-left: 28px;
+
+    position: relative;
+}
+
+.rusWord::after {
+    content: attr(rusWord);
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+}
+
+/* Стилизация правого блока словаря */
+
+.rightBlock-Eng {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 8px;
+}
+
+.rightBlock-Eng-new {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.engWord,
+.engWordOld {
+    padding-left: 28px;
+
+    position: relative;
+}
+
+
+.rightBlock-Eng-new > [data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    width: 101px;
+    height: auto;
+    position: absolute;
+    text-align: center;
+    padding: 8px 16px 10px 16px;
+    display: flex;
+    align-items: center;
+    white-space: pre-wrap;
+    justify-content: center;
+
+    border-radius: 10px;
+    background: #FFF;
+    color: #000;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.10);
+
+    font-family: 'IBM Plex Mono';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.48px;
+    gap: 10px;
+
+    left: 25px;
+    bottom: 25px;
+
+    max-width: 101px;
+    word-break: break-word;
+}
+
+
+.btnDelete {
+    border: none;
+    background: 0;
+    padding: 0px 11px 0 0;
+}
+
+.btnDelete:hover {
+    cursor: pointer;
+    scale: 1.02;
+}
+
+.btnDelete:active {
+    cursor: pointer;
+    scale: 0.95;
+}
+
+/* Стилизация кнопки Очистить всё */
+
+.deleteAll {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+}
+
+.deleteAllButton {
+    padding: 6px 10px 6px 10px;
+    display: flex;
+    align-items: center;
+    width: 176px;
+    height: 38px;
+    border-radius: 8px;
+    border: none;
+    gap: 12px;
+
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    letter-spacing: -0.9px;
+    background: #ADADAD; 
+}
+
+.deleteAllButtonImg {
+    width: 24px;
+}
+
+.deleteAllButton:hover {
+    cursor: pointer;
+    scale: 1.02;
+}
+
+.deleteAllButton:active {
+    cursor: pointer;
+    scale: 0.95;
+}
+
+/* Стилизация под мобильные устройства */
+
+@media (max-width: 767px) {
+/* Стилизация поля ввода */
+    .input-btn {
+        width: 328px;
+        margin-top: 76px;
+    }
+
+    .input {
+        width: 198px;
+
+        font-size: 15px;
+    }
+/* Стилизация словаря */
+    .dictionary {
+        margin-top: 50px;
+
+        /* width: 328px; */
+    }
+
+/* Словарь - левый блок */
+    .leftBlock-Rus {
+        width: 164px;
+    }
+
+    .rusWord,
+    .rusWordOld {
+        padding-left: 16px;
+    }
+
+/* Словарь - правый блок */
+    .rightBlock-Eng,
+    .rightBlock-Eng-new {
+        width: 164px;
+    }
+
+    .engWord,
+    .engWordOld {
+        padding-left: 16px;
+    }
+}
+
+/* @media (min-width: 768px) and (max-width: 1199px) {
+    .input-btn {
+        width: 400px;
+        margin-top: 100px;
+    }
+} */

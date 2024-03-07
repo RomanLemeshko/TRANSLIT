@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Транслит</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+
+    <script defer src="./index.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,400;1,300;1,400&family=Whisper&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <p>T.R.A.N.S.L.I.T.</p>
+        </div>
+        <div class="input-btn">
+            <input type="text" class="input" placeholder="Начните вводить текст">
+            <button class="btn">Добавить</button>
+        </div>
+        <div class="dictionary" id="dictionary-id">
+            <div class="word">
+                <div class="leftBlock-Rus">
+                    <div class="number">1</div>
+                    <div class="rusWordOld">
+                        Привет 👋🏻
+                    </div>
+                </div>
+                <div class="rightBlock-Eng">
+                    <div class="engWordOld">
+                        <abbr data-title="Privet">Privet</abbr>
+                    </div>
+                    <button class="btnDelete"><img src="./icons/Group 1.svg" alt="Крестик"></button>
+                </div>
+            </div>
+        </div>
+        <div class="deleteAll">
+            <button class="deleteAllButton" id="deleteAllButton"><img class="deleteAllButtonImg" src="./icons/Group 1.svg" alt="Очистить всё">Очистить всё</button>
+        </div>
+    </div>
+</body>
+
+</html>
